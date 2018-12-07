@@ -1,28 +1,39 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react"
+import Tabs from "./common-components/Tabs"
+import Tab from "./common-components/Tab"
+import TabContainer from "./common-components/TabContainer"
 
+const ClaimsInfo = () => {
+  return <div>This is the Claims Info Component</div>
+}
+
+const CreateClaim = () => {
+  return <div>This is the Create Claim Component</div>
+}
 class App extends Component {
+  state = { selectedIndex: 0 }
+
+  handleChange = index => {
+    console.log("index", index)
+    this.setState({ selectedIndex: index })
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+      <React.Fragment>
+        <Tabs
+          onChange={this.handleChange}
+          selectedIndex={this.state.selectedIndex}
+        >
+          <Tab label="Claims Info" />
+          <Tab label="Create a Claim" />
+        </Tabs>
+        <TabContainer selectedIndex={this.state.selectedIndex}>
+          <ClaimsInfo />
+          <CreateClaim />
+        </TabContainer>
+      </React.Fragment>
+    )
   }
 }
 
-export default App;
+export default App
