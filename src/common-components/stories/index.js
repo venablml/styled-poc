@@ -10,6 +10,7 @@ import Button from "../Button"
 import Header from "../Header"
 import Tabs from "../Tabs"
 import Tab from "../Tab"
+import TextInput from "../TextInput"
 
 storiesOf("Welcome", module).add("to Storybook", () => (
   <Welcome showApp={linkTo("Button")} />
@@ -20,6 +21,11 @@ storiesOf("Button", module)
   .add("Secondary", () => <Button>{text("Label", "Modify Policy")}</Button>)
 
 storiesOf("Header", module).add("Header", () => <Header />)
+storiesOf("Text Input", module)
+  .add("TextInput", () => <TextInput value="Mary Shelley" />)
+  .add("TextInput with left margin", () => (
+    <TextInput marginLeft="50px" value="Joseph Jones" />
+  ))
 storiesOf("Tabs", module).add("with two tabs", () => (
   <Tabs onChange={() => {}} selectedIndex={1}>
     <Tab label={text("Label", "Quotes")} />
