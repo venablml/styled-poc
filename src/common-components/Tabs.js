@@ -1,11 +1,11 @@
-import React from "react"
+import React from 'react'
 
 const Tabs = props => {
   const tabs = React.Children.map(props.children, (child, index) => {
     return React.cloneElement(child, {
       index: index,
       onClick: () => props.onChange(index),
-      selected: props.selectedIndex === index
+      selected: props.selectedIndex === index,
     })
   })
   return <div>{tabs}</div>
