@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 const TextInput = styled.input`
+  box-sizing: border-box;
   width: ${props => (props.width ? props.width : "200px")};
   color: ${props => props.theme.input.textColor};
   height: 38px;

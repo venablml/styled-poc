@@ -13,6 +13,9 @@ export const CwTheme = {
     textColor: "#454855",
     border: "1px solid #d2d2d2",
     bg: "#fff"
+  },
+  label: {
+    textColor: "#454855"
   }
 }
 
@@ -31,6 +34,9 @@ export const ZurichTheme = {
     textColor: "#454855",
     border: "1px solid #d2d2d2",
     bg: "#fff"
+  },
+  label: {
+    textColor: "#454855"
   }
 }
 
@@ -49,5 +55,8 @@ export const AonTheme = {
     textColor: "#454855",
     border: "1px solid #d2d2d2",
     bg: "#fff"
+  },
+  label: {
+    textColor: "#454855"
   }
 }
