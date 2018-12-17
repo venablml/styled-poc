@@ -22,8 +22,8 @@ storiesOf("Button", module)
 storiesOf("Header", module).add("Header", () => <Header />)
 storiesOf("Tabs", module).add("with two tabs", () => (
   <Tabs onChange={() => {}} selectedIndex={1}>
-    <Tab label={text("Label", "Peace")} />
-    <Tab label={text("Label", "Love")} />
-    <Tab label={text("Label", "Understanding")} />
+    <Tab label={text("Label", "Quotes")} />
+    <Tab label={text("Label", "Policies")} />
+    <Tab label={text("Label", "Certificates")} />
   </Tabs>
 ))
